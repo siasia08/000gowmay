@@ -1,0 +1,29 @@
+# 先忽略全部
+*
+
+# 允許 gitignore 本身
+!.gitignore
+
+# 允許資料夾結構
+!*/
+
+# 允許 html
+!*.html
+
+# 允許 css
+!css/
+!css/**
+
+# 允許 img
+!img/
+!img/**
+
+# 允許 js 資料夾
+!js/
+
+# 但 js 底下全部忽略
+js/*
+
+# 只開放這兩個
+!js/main.js
+!js/kaiadmin.js

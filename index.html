@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>購玩美 GOWMAY｜享購 暢玩 健美</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta name="KeyWords" content="">
+        <meta name="description" content="「購玩美」商城，打造健康、美麗、安全的玩美商城，商城架設串接金流服務、商城直播、每月不定期抽獎活動，並可以累積紅利點數。">
+        <meta property="og:title" content="會員中心｜購玩美 GOWMAY" />
+        <meta property="og:url" content="https://gowmay.com/v1/" />
+        <meta property="og:image" content="./img/gowmayOG.jpg" />
+        <meta property="og:description" content="「購玩美」商城，打造健康、美麗、安全的玩美商城，商城架設串接金流服務、商城直播、每月不定期抽獎活動，並可以累積紅利點數。" />
+        
+        <!-------------- Favicon -------------->
+        <link href="./img/favicon.ico" rel="icon" />
+        
+        <!-------------- Google Web Fonts -------------->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+TC:wght@200..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+        
+        <!-------------- Icon Font Stylesheet -------------->
+        <link rel="stylesheet" href="./css/all.min.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+        
+        <!-------------- Libraries Stylesheet -------------->
+        <link href="./lib/animate/animate.min.css" rel="stylesheet">
+        <link href="./lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="./lib/lightbox/css/lightbox.min.css" rel="stylesheet">                                     
+
+        <!-------------- CSS Files -------------->
+        <link rel="stylesheet" href="./css/bootstrap.min.css" />
+         
+        <link rel="stylesheet" href="./css/plugins.min.css" />
+        <link rel="stylesheet" href="./css/kaiadmin.css" />
+                
+        <!-------------- 購玩美頁面設定 -------------->
+        <link href="./css/layout.css" rel="stylesheet">      
+    </head>
+    <body>
+        <!-------------- Spinner Start -------------->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-------------- Spinner End -------------->
+
+        <!-------------- 導覽列與會員下拉選單 Start -------------->
+        <div class="container-fluid position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-light px-3 px-lg-5 py-3 py-lg-0">
+                <a href="index.html" class="navbar-brand p-0">
+                    <img src="img/gowmayLogoWeb.png" class="d-none d-xl-block img-fluid" alt="購玩美桌機版Logo">
+                    <img src="./img/gowmayLogoM.png" class="d-block d-xl-none img-fluid" alt="購玩美M版Logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-lg-between" id="navbarCollapse">
+                    <div class="navbar-nav">
+                        <a href="index.html" class="nav-item nav-link active">首頁</a>
+                        <a href="#" class="nav-item nav-link">加入購玩美</a>
+                        <a href="https://line.me/R/ti/p/@360ebtat" class="nav-item nav-link">加入官方LINE</a>
+                    </div>
+                    <ul class="navbar-nav topbar-nav justify-content-start align-items-center">
+                    <!--------- 會員未登入 Start --------->
+                        <li class="d-block w-100">
+                            <a href="index.html" class="nav-item nav-link">登入｜註冊</a>
+                        </li>
+                    <!--------- 會員未登入 Start --------->                             
+                    <!--------- 會員登入後 Start --------->
+                        <li class="nav-item topbar-user dropdown hidden-caret ">
+                            <a class="dropdown-toggle profile-pic frontEnd"
+                              data-bs-toggle="dropdown"
+                              href="#"
+                              aria-expanded="false">
+                              <div class="avatar-sm">
+                                <img src="img/userFemalePic01.jpg" alt="會員大頭貼" class="avatar-img rounded-circle" />
+                              </div>
+                              <span class="profile-username">
+                                <span class="frontEnd">夏思敏</span>
+                              </span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-user animated fadeIn">
+                              <div class="dropdown-user-scroll scrollbar-outer">
+                                <li>
+                                  <div class="user-box">
+                                    <div class="avatar-lg">
+                                      <img
+                                        src="img/userFemalePic01.jpg"
+                                        alt="image profile"
+                                        class="avatar-img rounded"
+                                      />
+                                    </div>
+                                    <div class="u-text">
+                                      <span class="userName vip">夏思敏</span>
+                                      <span class="memberLevel">初階VIP</span>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="dropdown-divider"></div>
+                                  <a class="dropdown-item vip" href="#">
+                                    <i class="fa-solid fa-user"></i>會員資訊
+                                  </a>
+                                  <a class="dropdown-item vip" href="#">
+                                    <i class="fa-solid fa-award"></i>獎勵查詢
+                                  </a>
+                                </li>
+                                <li class="d-flex justify-content-center mt-2">
+                                  <button class="btn-vip">
+                                    <i class="fa-solid fa-right-from-bracket"></i>登出
+                                  </button>
+                                </li>
+                              </div>
+                            </ul>
+                        </li>
+                    <!--------- 會員登入後 End --------->
+                    </ul> 
+                </div>
+            </nav>
+
+            <!-------------- 版頭大輪播 Start -------------->
+            <div class="carousel-header">
+                <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselId" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#carouselId" data-bs-slide-to="1"></button>
+                    </div>
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <img src="img/bannerWeb01.jpg" class="img-fluid w-100 d-xl-block d-md-none d-none" alt="健康×美麗×商務成長共享平台">
+                            <img src="img/bannerM01.jpg" class="img-fluid w-100 d-xl-none d-md-block d-block" alt="健康×美麗×商務成長共享平台">
+                            <div class="carousel-caption-1">
+                                <div class="carousel-caption-1-content" style="max-width: 1100px;">
+                                    <h4 class="captionSubTitle fadeInRight animated" data-animation="fadeInRight" data-delay="1s" style="animation-delay: 1s;">購玩美 GOWMAY</h4>
+                                    <h2 class="captionTitle fadeInRight animated" data-animation="fadeInRight" data-delay="1.3s" style="animation-delay: 1.3s;">健康×美麗×商務成長共享平台</h2>
+                                    <p class="captionText fadeInRight animated" data-animation="fadeInRight" data-delay="1.5s" style="animation-delay: 1.5s;">
+                                    專屬於會員的跨產業整合平台<br/>
+                                    協助你整合健康、美麗與商務資源 
+                                    </p>
+                                    <div class="carousel-caption-1-content-btn fadeInRight animated" data-animation="fadeInRight" data-delay="1.7s" style="animation-delay: 1.7s;">
+                                        <a class="buttonMoreC" href="#">免費註冊</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/bannerWeb02.jpg" class="img-fluid w-100 d-xl-block d-md-none d-none" alt="站上整合資源的起點">
+                            <img src="img/bannerM02.jpg" class="img-fluid w-100 d-xl-none d-md-block d-block" alt="站上整合資源的起點">
+                            <div class="carousel-caption-2">
+                                <div class="carousel-caption-2-content" style="max-width: 1100px;">
+                                    <h4 class="captionSubTitle fadeInLeft animated" data-animation="fadeInLeft" data-delay="1s" style="animation-delay: 1s;letter-spacing: 3px;">加入購玩美 GOWMAY</h4>
+                                    <h1 class="captionTitle fadeInLeft animated" data-animation="fadeInLeft" data-delay="1.3s" style="animation-delay: 1.3s;">站上整合資源的起點</h1>
+                                    <p class="captionText fadeInLeft animated" data-animation="fadeInLeft" data-delay="1.5s" style="animation-delay: 1.5s;">
+                                    從健康管理到商務發展<br/>
+                                    由平台為你媒合合適的資源
+                                    </p>
+                                    <div class="carousel-caption-2-content-btn fadeInLeft animated" data-animation="fadeInLeft" data-delay="1.7s" style="animation-delay: 1.7s;">
+                                        <a class="buttonMoreC" href="#">免費註冊</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon btn btn-primary fadeInLeft animated" aria-hidden="true" data-animation="fadeInLeft" data-delay="1.1s" style="animation-delay: 1.3s;"> <i class="fa fa-angle-left fa-3x"></i></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+                        <span class="carousel-control-next-icon btn btn-primary fadeInRight animated" aria-hidden="true" data-animation="fadeInLeft" data-delay="1.1s" style="animation-delay: 1.3s;"><i class="fa fa-angle-right fa-3x"></i></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <!-------------- 版頭大輪播 End -------------->
+        </div>
+        <!-------------- 導覽列 & 大輪播 End -------------->
+        
+        <div class="blank64"></div>
+        
+    <!--------------   痛點與需求共鳴區塊 Start   -------------->
+        <div class="container why">
+        <!--------------   大標題 Start   -------------->
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center wow fadeInDown" data-wow-duration="1">
+                    <div class="titleH2A">
+                      <span class="stroke">你是否也有這些困擾</span>
+                      <span class="fill">你是否也有這些困擾</span>
+                    </div>
+                </div>
+            </div>
+        <!--------------   大標題 End   -------------->
+                        
+            <div class="row g-md-4 g-3 align-items-center">
+                <div class="col-xl-6 col-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">
+                    <div class="row g-md-4 g-2 flex-wrap">
+                        <div class="col-6">
+                            <div class="whyPic-upperLeft">
+                                <img src="./img/whyPic01.jpg" alt="想讓自己變得更美、更有自信情境圖">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="whyPic-upperRight">
+                                <img src="./img/whyPic02.jpg" alt="健康被好好理解與陪伴情境圖">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="whyPic-lowerLeft">
+                                <img src="./img/whyPic03.jpg" alt="結識理念相近的圈子情境圖">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="whyPic-lowerRight">
+                                <img src="./img/whyPic04.jpg" alt="為未來規劃與合作探索情境圖">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-12">
+                    <div class="whyContent wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+                        <ul>
+                            <li>想讓自己變得更美、更有自信，卻不知道哪些選擇真正適合自己。</li>
+                            <li>開始重視健康管理，卻缺乏可信任的資訊與專業協助。</li>
+                            <li>想結交理念相近、價值觀相同的朋友，卻很難找到可以長期交流的圈子。</li>
+                            <li>面對事業或未來規劃，希望有人能依你的狀況，協助媒合合適的資源。</li>
+                            <li>有合作或發展想法，卻不知道該從哪裡開始，或該找誰討論。</li>
+                        </ul>
+                        <p class="fs22 body-secondary">
+                            購玩美，並非提供制式答案，而是以商務俱樂部的方式，陪你在同一個平台中，同時照顧自己、拓展人脈，也為未來保留更多可能。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!--------------   痛點與需求共鳴區塊 End   -------------->
+       
+        <div class="blank64"></div>
+
+    <!--------------   我們的角色定位區塊 Start   -------------->
+        <div class="container-fluid role">
+            <div class="blank64"></div>
+            <div class="container g-0">
+            <!--------------   大標題 Start   -------------->
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-center wow fadeInDown" data-wow-duration="1">
+                        <div class="titleH2A">
+                          <span class="stroke">我們的角色定位</span>
+                          <span class="fill">我們的角色定位</span>
+                        </div>
+                    </div>
+                </div>
+            <!--------------   大標題 End   -------------->
+               
+               <div class="row g-4">
+                   <div class="col-12 wow fadeInUp" data-wow-duration="1" data-wow-delay="0.5s">
+                       <p>
+                            <span class="fs24 body-primary">
+                                購玩美，不只是單一服務平台，而是一個以人為核心的商務俱樂部</span><br/>
+                            <span class="fs20 text-dark01">
+                                 購玩美是一個結合健康、美麗與事業發展的會員制商務俱樂部，透過顧問陪伴與會員交流，協助會員在不同階段，做出更適合自己的選擇。
+                            </span>   
+                       </p>
+                       <p class="fs24 body-primary">
+                            我們為會員做的，不只是其中一件事   
+                       </p>
+                   </div>
+               </div> 
+               <div class="row g-4">
+                   <div class="col-md-8 col-12">
+                       <div class="row g-4 flex-wrap">
+                           <div class="col-md-6 col-12">
+                               <div class="roleInfo wow fadeInUp" data-wow-duration="1" data-wow-delay="0.5s">
+                                   <div class="rolePic-left">
+                                       <img src="./img/rolePic01.jpg" alt="美麗與健康的專屬諮詢情境圖">
+                                   </div>
+                                   <div class="fs22 body-primary">
+                                       美麗與健康的專屬諮詢
+                                   </div>
+                                   <div class="fs20 text-light01">
+                                       由顧問了解你的需求，整合旗下診所資源，陪你找到適合自己的健康管理與美麗方向。
+                                   </div>
+                               </div>
+                           </div>
+                           <div class="col-md-6 col-12">
+                               <div class="roleInfo wow fadeInUp" data-wow-duration="1" data-wow-delay="0.6s">
+                                   <div class="rolePic-middle">
+                                       <img src="./img/rolePic02.jpg" alt="協槓創業與多元發展機會情境圖">
+                                   </div>
+                                   <div class="fs22 body-primary">
+                                       協槓創業與多元發展機會
+                                   </div>
+                                   <div class="fs20 text-light01">
+                                       協助會員探索斜槓與事業發展的可能，連結合適的合作方向與資源。
+                                   </div>
+                               </div>
+                           </div>
+                           <div class="col-md-6 col-12">
+                               <div class="roleInfo wow fadeInUp" data-wow-duration="1" data-wow-delay="0.5s">
+                                   <div class="rolePic-middle">
+                                       <img src="./img/rolePic03.jpg" alt="會員推薦回饋機制情境圖">
+                                   </div>
+                                   <div class="fs22 body-primary">
+                                       會員推薦回饋機制
+                                   </div>
+                                   <div class="fs20 text-light01">
+                                       透過會員推薦會員，累積點數，可用於折抵療程或產品費用，讓分享成為實際回饋。
+                                   </div>
+                               </div>
+                           </div>
+                           <div class="col-md-6 col-12">
+                               <div class="roleInfo wow fadeInUp" data-wow-duration="1" data-wow-delay="0.6s">
+                                   <div class="rolePic-middle">
+                                       <img src="./img/rolePic04.jpg" alt="顧問一對一量身陪伴情境圖">
+                                   </div>
+                                   <div class="fs22 body-primary">
+                                       顧問一對一量身陪伴
+                                   </div>
+                                   <div class="fs20 text-light01">
+                                       透過顧問交流，協助你梳理適合自己的健康美麗方向，以及符合現階段的事業發展策略。
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-md-4 col-12">
+                       <div class="roleInfo wow fadeInUp" data-wow-duration="1" data-wow-delay="0.5s">
+                           <div class="rolePic-right">
+                               <img src="./img/rolePic05.jpg" alt="商務俱樂部交流與人脈連結情境圖">
+                           </div>
+                           <div class="fs22 body-primary">
+                               商務俱樂部交流與人脈連結
+                           </div>
+                           <div class="fs20 text-light01">
+                               不定期舉辦下午茶與交流活動，讓來自不同產業的會員，在信任基礎上分享經驗、交換資源，共創事業合作的可能。
+                           </div>
+                           <div class="fs22 body-secondary pt-2">
+                               購玩美不是制式方案的集合，而是一個以商務俱樂部方式運作的長期夥伴。
+                           </div>
+                       </div>
+                   </div>                   
+               </div>
+            </div>
+            <div class="blank64"></div>
+        </div>
+    <!--------------   我們的角色定位區塊 End   -------------->
+
+    <!--------------   實際運作的資源整合區塊 Start   -------------->
+        <div class="container-fluid resource">
+            <div class="blank64"></div>
+            <div class="container g-0">
+            <!--------------   大標題 Start   -------------->
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-center wow fadeInDown" data-wow-duration="1">
+                        <div class="titleH2A">
+                          <span class="stroke">實際運作的資源整合</span>
+                          <span class="fill">實際運作的資源整合</span>
+                        </div>
+                    </div>
+                </div>
+            <!--------------   大標題 End   -------------->
+                <div class="row g-4">
+                   <div class="col-12 wow fadeInUp" data-wow-duration="1" data-wow-delay="0.5s">
+                       <p>
+                            <span class="fs24 body-primary">
+                                不只是理念，購玩美背後有實際運作的支撐</span><br/>
+                            <span class="fs20 text-dark02">
+                                 我們能為會員提供健康、美麗與事業發展的整合服務，來自於背後一整套已實際運作的專業平台與實體資源。
+                            </span>   
+                       </p>
+                       <p class="fs24 body-primary">
+                            八大平台角色說明   
+                       </p>
+                   </div>
+                </div> 
+                <div class="row g-4 flex-wrap">
+                    <div class="col-md-4 col-12">
+                        <div class="resourceInfo wow fadeInUp" data-wow-duration="1" data-wow-delay="0.5s">
+                            <div class="resourcePic-upperLeft">
+                                <img src="./img/resourcePic01.jpg" alt="商務人脈交流情境圖">
+                            </div>
+                            <div class="fs22 body-secondary">
+                               商務俱樂部交流與人脈連結
+                            </div>
+                            <div class="fs20 text-light02">
+                               由台灣萬事達金流電子發票加值中心支援，確保交易合規與安全，讓會員與合作夥伴能安心合作。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <div class="resourceInfo wow fadeInUp" data-wow-duration="1" data-wow-delay="0.6s">
+                            <div class="resourcePic-middle">
+                                <img src="./img/resourcePic02.jpg" alt="彈性分期與消費機制說明情境圖">
+                            </div>
+                            <div class="fs22 body-secondary">
+                               彈性分期與消費機制
+                            </div>
+                            <div class="fs20 text-light02">
+                               透過創新分期，降低一次性負擔，讓健康管理、服務體驗與事業發展，都能有更彈性的選擇空間。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <div class="resourceInfo wow fadeInUp" data-wow-duration="1" data-wow-delay="0.7s">
+                            <div class="resourcePic-upperRight">
+                                <img src="./img/resourcePic03.jpg" alt="專業醫療管理系統說明情境圖">
+                            </div>
+                            <div class="fs22 body-secondary">
+                               專業醫療管理系統
+                            </div>
+                            <div class="fs20 text-light02">
+                               MEDPro 醫療管理系統，作為診所與醫療端的專業支撐，確保會員所接觸的服務具備穩定與專業基礎。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-12">
+                        <div class="resourceInfo wow fadeInUp" data-wow-duration="1" data-wow-delay="0.5s">
+                            <div class="resourcePic-lowerLeft">
+                                <img src="./img/resourcePic04.jpg" alt="與顧客說明診所服務項目情境圖">
+                            </div>
+                            <div class="fs22 body-secondary">
+                               實體健康管理與醫療資源
+                            </div>
+                            <div class="fs20 text-light02">
+                               結合海漾大健康管理診所，提供具備醫療專業背景的健康與美麗管理支撐，而非單一體驗。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-12">
+                        <div class="resourceInfo wow fadeInUp" data-wow-duration="1" data-wow-delay="0.6s">
+                            <div class="resourcePic-middle">
+                                <img src="./img/resourcePic05.jpg" alt="用電子票券消費情境圖">
+                            </div>
+                            <div class="fs22 body-secondary">
+                               電子票券與履約機制
+                            </div>
+                            <div class="fs20 text-light02">
+                               由 GomyTicket 提供完整的票券與履約系統，協助服務數位化，確保權益可兌換、可追蹤。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-12">
+                        <div class="resourceInfo wow fadeInUp" data-wow-duration="1" data-wow-delay="0.7s">
+                            <div class="resourcePic-middle">
+                                <img src="./img/resourcePic06.jpg" alt="介紹募資專案情境圖">
+                            </div>
+                            <div class="fs22 body-secondary">
+                               募資與專案啟動支援
+                            </div>
+                            <div class="fs20 text-light02">
+                               透過 MuMu 募資平台，協助會員將創意與事業構想，轉化為可被實際執行的專案。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-12">
+                        <div class="resourceInfo wow fadeInUp" data-wow-duration="1" data-wow-delay="0.8s">
+                            <div class="resourcePic-lowerRight">
+                                <img src="./img/resourcePic07.jpg" alt="帶狗狗一起旅遊情境圖">
+                            </div>
+                            <div class="fs22 body-secondary">
+                               垂直產業服務平台
+                            </div>
+                            <div class="fs20 text-light02">
+                               透過毛探長與台灣 GO 站，串聯寵物與旅遊等生活產業，拓展跨領域合作與曝光機會。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row pt-4">
+                   <div class="col-12 wow fadeInUp" data-wow-duration="1" data-wow-delay="0.5s">
+                       <p class="fs20 text-dark02">
+                         這些平台並非各自獨立存在，而是由購玩美商務俱樂部進行整合，讓會員在同一個信任基礎上，同時照顧生活、健康與事業的不同面向。
+                       </p>
+                   </div>
+                </div>                
+            </div>            
+            <div class="blank64"></div>
+        </div>                       
+    <!--------------   實際運作的資源整合區塊 End   -------------->
+
+    <!--------------   會員專屬精選商品區塊 Start   -------------->
+        <div class="container-fluid product">
+            <div class="blank64"></div>
+            <div class="container g-0">
+            <!--------------   大標題 Start   -------------->
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-center wow fadeInDown" data-wow-duration="1">
+                        <div class="titleH2A">
+                          <span class="stroke">會員專屬精選商品</span>
+                          <span class="fill">會員專屬精選商品</span>
+                        </div>
+                    </div>
+                </div>
+            <!--------------   大標題 End   -------------->
+                
+                <div class="row g-4">
+                   <div class="col-12 wow fadeInUp" data-wow-duration="1" data-wow-delay="0.5s">
+                       <p class="fs20 text-dark01">
+                            <span class="body-light-accent">※</span>&nbsp;&nbsp;本區商品為會員限定精選內容，其中包含購玩美會籍方案之相關贈品，以及僅開放會員了解與選擇的專屬商品。 點擊商品後僅提供商品介紹資訊，實際取得方式、是否適用或可購買，依會員身分與顧問說明為準。   
+                       </p>
+                   </div>
+                </div>
+                
+                <div class="row">
+                    <ul class="product-carousel owl-carousel">
+                        <li class="product-item">
+                            <a href="https://gowmay.com/v1/product/001">
+                                <div class="productPic">
+                                    <img src="./img/productPic01.jpg" alt="MCT Plus生酮巧克力商品圖">
+                                </div>
+                                <div class="productName">
+                                    MCT Plus生酮巧克力
+                                </div>
+                                <div class="buttonMoreA">
+                                    查看商品介紹
+                                </div>                             
+                            </a>
+                        </li>
+                        <li class="product-item">
+                            <a href="https://gowmay.com/v1/product/005">
+                                <div class="productPic">
+                                    <img src="./img/productPic02.jpg" alt="漾_煥活激黑豐盈萌髮液商品圖">
+                                </div>
+                                <div class="productName">
+                                    漾_煥活激黑豐盈萌髮液
+                                </div>
+                                <div class="buttonMoreA">
+                                    查看商品介紹
+                                </div>                             
+                            </a>
+                        </li>
+                        <li class="product-item">
+                            <a href="https://gowmay.com/v1/product/003">
+                                <div class="productPic">
+                                    <img src="./img/productPic03.jpg" alt="漾-臍肌 凍晶/晶萃組商品圖">
+                                </div>
+                                <div class="productName">
+                                    漾-臍肌 凍晶/晶萃組
+                                </div>
+                                <div class="buttonMoreA">
+                                    查看商品介紹
+                                </div>                             
+                            </a>
+                        </li>
+                        <li class="product-item">
+                            <a href="https://gowmay.com/v1/product/004">
+                                <div class="productPic">
+                                    <img src="./img/productPic04.jpg" alt="漾-5D生物纖維面膜商品圖">
+                                </div>
+                                <div class="productName">
+                                    漾-5D生物纖維面膜
+                                </div>
+                                <div class="buttonMoreA">
+                                    查看商品介紹
+                                </div>                             
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>            
+            <div class="blank64"></div>
+        </div>    
+    <!--------------   會員專屬精選商品區塊 End   -------------->
+        
+    <!--------------   加入會員區塊 Start   -------------->
+        <div class="container-fluid join">
+            <div class="blank64"></div>
+            <div class="container g-0">
+            <!--------------   大標題 Start   -------------->
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-center wow fadeInDown" data-wow-duration="1">
+                        <div class="titleH2A">
+                          <span class="stroke">加入會員 開啟更多可能</span>
+                          <span class="fill">加入會員 開啟更多可能</span>
+                        </div>
+                    </div>
+                </div>
+            <!--------------   大標題 End   -------------->
+                <div class="row g-4 align-items-center">
+                    <div class="col-xl-5 col-lg-6 col-md-12 order-lg-0 order-md-1 order-1">
+                        <div class="joinContent wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">
+                            <div class="fs24 body-primary">
+                                一般會員
+                            </div>
+                            <ul>
+                                <li>瀏覽平台內容與基礎資訊</li>
+                                <li>了解購玩美的生態系與服務方向</li>
+                                <li>作為認識平台與評估是否進一步加入的起點</li>
+                            </ul>
+                            <div class="fs24 body-primary pt-4">
+                                初階 VIP 會員
+                            </div>
+                            <div class="fs20 text-dark02">
+                                購買會籍方案 1.0 或 2.0 即可成為
+                            </div>
+                            <ul>
+                                <li>顧問陪伴，協助釐清健康、美麗或事業發展方向</li>
+                                <li>會員限定商品與相關權益</li>
+                                <li>商務交流、人脈連結與資源媒合</li>
+                                <li>參與會員回饋與推薦機制</li>
+                                <li>專屬的健康與美麗規劃方向</li>
+                                <li>會員限定精選商品與相關權益</li>
+                                <li>商務交流、資源連結與回饋設計</li>
+                            </ul>
+                            <a href="" class="buttonMoreD mt-4">
+                                <i class="fa-solid fa-user-plus"></i>加入購玩美會員
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xl-7 col-lg-6 col-md-12 order-lg-1 order-md-0 order-0">
+                        <div class="joinPic wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+                            <div class="joinPic-left">
+                                <img src="./img/joinPic03.jpg" alt="">
+                                <div class="joinPic-right wow rotateIn" data-wow-duration="1s" data-wow-delay="0.7s">
+                                    <img src="./img/joinPic02.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="blank64"></div>
+        </div>                        
+    <!--------------   加入會員區塊 End   -------------->
+
+    <!--------------   進階族群連結區塊 Start   -------------->
+        <div class="container-fluid CTA">
+            <div class="blank64"></div>
+            <div class="container g-0">
+            <!--------------   大標題 Start   -------------->
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-center wow fadeInDown" data-wow-duration="1">
+                        <div class="titleH2A">
+                          <span class="stroke">更多可能 從這裡開始</span>
+                          <span class="fill">更多可能 從這裡開始</span>
+                        </div>
+                    </div>
+                </div>
+            <!--------------   大標題 End   -------------->
+                <div class="row">
+                   <div class="col-12 wow fadeInUp" data-wow-duration="1" data-wow-delay="0.5s">
+                       <p>
+                            <span class="fs24 body-primary">
+                                不只是體驗，而是進階合作的可能</span><br/>
+                            <span class="fs20 text-dark01">
+                                 對於希望進一步探索合作、事業發展或資源整合的會員，購玩美提供以顧問交流與人脈連結為核心的進階互動方式，依不同階段與需求，陪你梳理方向、連結合適的資源。
+                            </span>   
+                       </p>
+                       <p class="fs20 text-dark01">
+                           這不只是一次體驗，而是一段能隨著你成長而展開的長期關係。
+                       </p>
+                       <p class="fs24 body-primary pt-3">
+                            從這裡開始，選擇適合你的下一步   
+                       </p>
+                   </div>
+                </div>
+                <div class="row g-4 ctaScroll">
+                    <div class="col-xl-4 col-lg-5 col-md-7 col-10 wow bounceIn" data-wow-duration="1" data-wow-delay="0.6s">
+                       <a href="" class="buttonMoreD">
+                           <i class="fa-solid fa-user-plus"></i>免費註冊                           
+                       </a>
+                       <div class="fs20 text-light01 text-center pt-3">
+                           成為購玩美會員，開始探索平台內容
+                       </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-5 col-md-7 col-10 wow bounceIn" data-wow-duration="1" data-wow-delay="0.7s">
+                       <a href="https://line.me/R/ti/p/@360ebtat" class="buttonMoreD">
+                           <i class="fa-brands fa-line"></i>加入官方LINE                           
+                       </a>
+                       <div class="fs20 text-light01 text-center pt-3">
+                           會員諮詢與最新消息
+                       </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-5 col-md-7 col-10 wow bounceIn" data-wow-duration="1" data-wow-delay="0.8s">
+                       <a href="mailto:gowmaytw@gmail.com" class="buttonMoreD">
+                           <i class="fa-solid fa-envelope-open-text"></i>聯絡我們  
+                       </a>
+                       <div class="fs20 text-light01 text-center pt-3">
+                           顧問交流與進階合作洽詢
+                       </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="blank64"></div>
+        </div>                        
+    <!--------------   進階族群連結區塊 End   -------------->
+        
+    <!--------------   頁尾 Footer Start   -------------->
+        <div class="container-fluid footerFront">
+            <div class="row g-xl-4 g-lg-3 g-3 align-items-center">
+                <div class="col-lg-4 col-12">
+                    <div class="footerLogo">
+                       <a href="index.html">
+                           <img src="./img/gowmayLogoAside.svg" alt="購玩美頁尾Logo">
+                       </a>
+                    </div>
+                    <div class="copyrightFront">
+                        Copyright © 2025 購玩美 All Rights Reserved.
+                    </div>                    
+                </div>
+                <div class="col-lg-4 col-12">
+                    <div class="contactInfo">
+                        <p>亞洲威世股份有限公司</p>
+                        <p>Email：
+                            <a href="mailto:gowmaytw@gmail.com" class="footerEtext">gowmaytw@gmail.com</a>
+                        </p>
+                        <p>客服電話：<span class="footerEtext">02-24286860</span></p>
+                    </div>
+                    <div class="footerTitle">追蹤我們</div>
+                    <div class="followUsBox">
+                        <div class="footerIcon">
+                            <a href="https://www.facebook.com/profile.php?id=100087457191557" class="facebook" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                        </div>
+                        <div class="footerIcon">
+                            <a href="https://line.me/R/ti/p/@360ebtat" class="line" target="_blank"><i class="fa-brands fa-line"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-12">
+                    <div class="footerTitle">八大平台</div>
+                    <div class="row g-xl-4 g-lg-2 g-md-4 g-4">
+                        <div class="col-md-3 col-6">
+                            <a href="https://gowmay.com/v1/page/medpro" class="partnerLogo" target="_blank">
+                                <img src="./img/partnerLogo01.png" alt="MedPro ERP 專業醫療管理系統LOGO">
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <a href="https://haiyangclinic.com/" class="partnerLogo" target="_blank">
+                                <img src="./img/partnerLogo02.png" alt="海漾大健康管理診所LOGO">
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <a href="https://ticket.gomypay.asia/v3/" class="partnerLogo" target="_blank">
+                                <img src="./img/partnerLogo03.png" alt="GomyTicket電子票券平台LOGO">
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <a href="https://newinst.gomypay.asia/" class="partnerLogo" target="_blank">
+                                <img src="./img/partnerLogo04.png" alt="創新分期LOGO">
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <a href="https://einvoice.gomypay.asia/" class="partnerLogo" target="_blank">
+                                <img src="./img/partnerLogo05.png" alt="台灣萬事達金流電子發票LOGO">
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <a href="https://taiwango.asia/" class="partnerLogo" target="_blank">
+                                <img src="./img/partnerLogo06.png" alt="台灣GO站LOGO">
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <a href="https://mumu.gomypay.asia/" class="partnerLogo" target="_blank">
+                                <img src="./img/partnerLogo07.png" alt="MUMU募資平台LOGO">
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <a href="https://sir.gomypay.asia/" class="partnerLogo" target="_blank">
+                                <img src="./img/partnerLogo08.png" alt="毛探長LOGO">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!--------------   頁尾 Footer End   -------------->
+        
+    <!--------------   Back to Top Start   -------------->
+        <div class="back-to-top">
+          <a href="#" class="btn-floating">
+              登入<br/>註冊
+          </a>
+          <a href="#" class="btn-floatingUp">
+              <i class="fa-solid fa-chevron-up"></i>
+          </a>
+        </div>
+    <!--------------   Back to Top End   -------------->
+    
+    <!-------------- JavaScript Libraries -------------->
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+
+    <!-------------- jQuery Scrollbar -------------->
+    <script src="./js/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+
+    <!-------------- Kaiadmin JS -------------->
+    <script src="./js/kaiadmin.min.js"></script>
+        
+    <script src="./lib/wow/wow.min.js"></script>
+    <script src="./lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- 購玩美頁面設定 -->
+    <script src="./js/main.js"></script>                
+        
+    </body>
+</html>
