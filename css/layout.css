@@ -4031,7 +4031,7 @@ a.prodName{
     display: flex;
     flex-direction: column;
     gap: 12px;
-    margin: 0 0 0 24px;
+    margin: 0 0 0 28px;
     padding: 0;
     list-style: disc;
 }
@@ -4243,7 +4243,10 @@ a.prodName{
     background: #fff url(../img/bgFill-light44b.png) repeat center top;
 }
 .product-carousel.owl-carousel .owl-stage-outer {
-    padding: 8px;
+    padding: 10px;
+}
+.product-carousel .owl-stage {
+    padding-left: 0 !important;
 }
 .product-carousel .header-carousel-item img {
     max-width: 100%;
@@ -4343,7 +4346,7 @@ a:active .productPic img{
     display: flex;
     flex-direction: column;
     gap: 12px;
-    margin: 0 0 0 24px;
+    margin: 0 0 0 28px;
     padding: 0;
     list-style: disc;
 }

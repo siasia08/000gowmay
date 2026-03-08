@@ -45,7 +45,7 @@
         smartSpeed: 2000,
         center: false,
         dots: true,
-        loop: false,
+        loop: true,
         margin: 36,
         nav : false,
         navText : [
@@ -55,25 +55,26 @@
         responsiveClass: true,
         responsive: {
             0:{
-                items:1.2,
+                items:1,
+                stagePadding: 40
             },
             576:{
-                items:1.3,
+                items:1,
+                stagePadding: 60
             },
             768:{
-                items:2.6,
+                items:2,
+                stagePadding: 50
             },
             992:{
-                items:3.1,
+                items:3,
+                stagePadding: 50
             },
             1200:{
-                items:4.06,
+                items:4,
+                stagePadding: 20
             }
-        },
-        navText : [
-            '<i class="bi bi-arrow-left"></i>',
-            '<i class="bi bi-arrow-right"></i>'
-        ]
+        }
     });
 	
     
@@ -91,4 +92,3 @@
     });
 
 })(jQuery);
-
