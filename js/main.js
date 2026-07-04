@@ -76,7 +76,103 @@
             }
         }
     });
-	
+
+     //八大平台資源總覽
+    $(".platform-carousel").owlCarousel({
+        autoplay: true,
+        smartSpeed: 2000,
+        center: false,
+        dots: true,
+        loop: true,
+        margin: 36,
+        nav : false,
+        navText : [
+            '<i class="bi bi-arrow-left"></i>',
+            '<i class="bi bi-arrow-right"></i>'
+        ],		
+        responsiveClass: true,
+        responsive: {
+            0:{
+                items:1,
+                margin: 24,
+                stagePadding: 10
+            },
+            576:{
+                items:1,
+                margin: 24,
+                stagePadding: 10
+            },
+            768:{
+                items:1,
+                stagePadding: 130
+            },
+            992:{
+                items:2,
+                stagePadding: 50
+            },
+            1200:{
+                items:3,
+                stagePadding: 20
+            }
+        }
+    });
+
+     //購玩美資源整合版圖
+    $(".opportunity-carousel").owlCarousel({
+        autoplay: true,
+        smartSpeed: 2000,
+        center: false,
+        dots: true,
+        loop: true,
+        margin: 36,
+        nav : false,
+        navText : [
+            '<i class="bi bi-arrow-left"></i>',
+            '<i class="bi bi-arrow-right"></i>'
+        ],		
+        responsiveClass: true,
+        responsive: {
+            0:{
+                items:1,
+                margin: 24,
+                stagePadding: 10
+            },
+            576:{
+                items:1,
+                margin: 24,
+                stagePadding: 10
+            },
+            768:{
+                items:1,
+                stagePadding: 130
+            },
+            992:{
+                items:2,
+                stagePadding: 50
+            },
+            1200:{
+                items:3,
+                stagePadding: 20
+            }
+        }
+    });
+
+    //  會員專屬精選商品照片輪播
+    $(".prod-carousel").owlCarousel({
+        items: 1,
+        autoplay: true,
+        smartSpeed: 2000,
+        center: false,
+        dots: true,
+        loop: true,
+        margin: 0,
+        nav : false,
+        navText : [
+            '<i class="bi bi-arrow-left"></i>',
+            '<i class="bi bi-arrow-right"></i>'
+        ]
+    });
+    
     
    // Back to top button
    $(window).scroll(function () {
