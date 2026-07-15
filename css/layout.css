@@ -134,8 +134,11 @@ a {
 .fs26{
     font-size: 26px;
     line-height: 1.3;
+    font-weight: 700;
 }
-
+.fb01{
+    font-weight: 700;
+}
 @media screen and (min-width: 992px) and (max-width: 1200px){
 
 }
@@ -2331,7 +2334,7 @@ a:hover > .knowCat .knowTag07{
 	font-size: 22px;
     color: #f8f5f2;
 }
-.breadcrumb-item + .breadcrumb-item::before{
+.breadcrumb-item+.breadcrumb-item::before{
 	color: #b2b7c2;
 }
 @media screen and (min-width: 992px) and (max-width: 1200px) {
@@ -4500,7 +4503,7 @@ a .productName{
     line-height: 1.3;
     font-weight: 700;        
     color: var(--primary) !important;
-    text-align-last: center;
+    text-align: center;
     transition: all 0.3s ease-in-out;
 }
 a:hover .productName{
@@ -4755,7 +4758,7 @@ a:active .productPic img{
     overflow-wrap: break-word;   
 }
 .valueCard-left, .valueCard-middle,
-.valueCard-right{
+.valueCard-right, .valueCard-full{
     padding: 16px 24px 32px;
     position: relative;
     width: 100%;
@@ -4777,9 +4780,13 @@ a:active .productPic img{
 .valueCard-right{
     border-radius: 0 32px 32px 0;
 }
+.valueCard-full{
+    border-radius: 32px;
+}
 .valueCard-left::before,
 .valueCard-middle::before,
 .valueCard-right::before,
+.valueCard-full::before,
 .categoryCard::before{
     content: "";
     position: absolute;
@@ -4801,6 +4808,9 @@ a:active .productPic img{
 }
 .valueCard-right::before{
     border-radius: 0 32px 32px 0;
+}
+.valueCard-full::before{
+    border-radius: 32px;
 }
 .valueBrief{
     display: flex;
@@ -4872,6 +4882,13 @@ a:active .productPic img{
     color: var(--primary-light-text) !important;
     gap: 12px;    
 }
+.processBrief p{
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    line-height: 1.3;
+    font-weight: 600;    
+}
 .category{
     display: flex;
     flex-direction: column;
@@ -4881,6 +4898,7 @@ a:active .productPic img{
 }
 .categoryCard{
     position: relative;
+    width: 100%;
     display: flex;
     padding: 24px;
     align-items: center;
@@ -4893,10 +4911,11 @@ a:active .productPic img{
     border-radius: 32px;
 }
 .ecosystemText{
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 4px;
+    gap: 12px;
     flex: 1 0 0;    
 }
 .categoryTitle{
@@ -4991,19 +5010,25 @@ a:active .productPic img{
     .valueCard-right{
         padding: 16px 16px 24px;
         gap: 12px;
-    }  
+    } 
     .valueCard-left{
         border-radius: 24px 0 0 24px;    
     }
     .valueCard-right{
         border-radius: 0 24px 24px 0;
-    }  
+    } 
+    .valueCard-full{
+        border-radius: 24px;
+    }
     .valueCard-left::before{
         border-radius: 24px 0 0 24px;    
     }
     .valueCard-right::before{
         border-radius: 0 24px 24px 0;
-    }    
+    } 
+    .valueCard-full::before{
+        border-radius: 24px;
+    }
     .processWrap{
         flex-wrap: nowrap;
         overflow-x: auto;
@@ -5029,6 +5054,15 @@ a:active .productPic img{
     }    
     .processTitle{
         font-size: 28px;
+    }
+    .processBrief{
+        text-align: justify;
+    }
+    .processBrief p{
+        text-align: justify;
+    }
+    .ingredientItem{
+        flex-direction: column;
     }
 }
 /*----------   關於購玩美 End   ----------*/
@@ -5569,7 +5603,7 @@ a:active .productPic img{
     background: #fff url(../img/bgFill-light24.jpg) repeat center top;
 }
 .exclusiveProdDetail{
-    background: #fff url(../img/bgFill-light01.jpg) center top / 80% auto repeat;
+    background: #fff url(../img/bgFill-light01.jpg) center top / 60% auto repeat;
 }
 .exclusiveProd p, .exclusiveProd span,
 .exclusiveProdDetail p, .exclusiveProdDetail span{
@@ -5590,7 +5624,7 @@ a:active .productPic img{
     line-height: 1.3;
     font-weight: 600;
     color: var(--primary-light-text) !important;
-    gap: 12px;    
+    gap: 12px; 
 }
 .product-item .features{
     display: flex;
@@ -5719,7 +5753,7 @@ a:active .productPic img{
     border-bottom: 1px dashed #c2b497;
 }
 .ingredient{
-    flex: 0 0 20%;
+    flex: 0 0 22%;
     font-size: 24px;
     font-weight: 700;
     line-height: 1.4;
@@ -5737,6 +5771,19 @@ a:active .productPic img{
     line-height: 1.3;
     font-weight: 600;
 }
+.ingredientBrief ul{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 0 0 0 24px;
+    padding: 0;
+    list-style: disc;
+}
+.ingredientBrief li{
+    font-size: 20px;
+    line-height: 1.3;
+    font-weight: 600;    
+}
 .category .ingredientItem:nth-child(odd)
 .ingredient{
     color: var(--primary) !important;
@@ -5746,17 +5793,244 @@ a:active .productPic img{
     color: var(--secondary) !important;
 }
 .category .ingredientItem:nth-child(odd)
-.ingredientBrief p{
+.ingredientBrief p,
+.category .ingredientItem:nth-child(odd)
+.ingredientBrief li{
     color: var(--primary-light-text) !important;
 }
 .category .ingredientItem:nth-child(even)
-.ingredientBrief p{
+.ingredientBrief p,
+.category .ingredientItem:nth-child(even)
+.ingredientBrief li{
     color: var(--secondary-light-text) !important;
+}
+.advantagesCard,
+.opportunityCard-upperLeft, .opportunityCard-upperRight,
+.opportunityCard-lowerLeft,
+.opportunityCard-lowerRight{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    flex-direction: column; 
+    gap: 12px;
+    box-shadow: 0 0 8px 0 rgba(55, 44, 29, 0.3);
+    overflow: hidden; /* 讓偽元素對齊圓角 */
+}
+.advantagesCard{
+    padding: 32px 24px;    
+    border-radius: 32px;
+}
+.opportunityCard-upperLeft, .opportunityCard-upperRight,
+.opportunityCard-lowerLeft,
+.opportunityCard-lowerRight{
+    padding: 32px;    
+}
+.opportunityCard-upperLeft{
+    padding: 32px;    
+    border-radius: 32px 0 0 0;
+}
+.opportunityCard-upperRight{
+    border-radius: 0 32px 0 0;
+}
+.opportunityCard-lowerLeft{
+    border-radius: 0 0 0 32px;
+}
+.opportunityCard-lowerRight{
+    border-radius: 0 0 32px 0;
+}
+.advantagesCard::before,
+.opportunityCard-upperLeft::before, .opportunityCard-upperRight::before,
+.opportunityCard-lowerLeft::before,
+.opportunityCard-lowerRight::before{
+    content: "";
+    position: absolute;
+    inset: 0; /* top:0 right:0 bottom:0 left:0 */
+    padding: 3px; /* 邊框粗細 */
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+.opportunityCard-upperLeft::before, .opportunityCard-upperRight::before,
+.opportunityCard-lowerLeft::before,
+.opportunityCard-lowerRight::before{
+    background: linear-gradient(93deg, #b99568 1.38%, #e0b143 25.54%, #b99568 49.69%, #e0b143 73.85%, #9f845c 98.01%);    
+}
+.advantagesCard::before{
+    border-radius: 32px;
+}
+.opportunityCard-upperLeft::before{
+    border-radius: 32px 0 0 0;
+}
+.opportunityCard-upperRight::before{
+    border-radius: 0 32px 0 0;
+}
+.opportunityCard-lowerLeft::before{
+    border-radius: 0 0 0 32px;
+}
+.opportunityCard-lowerRight::before{
+    border-radius: 0 0 32px 0;
+}
+.advantages > div:nth-child(odd) .advantagesCard::before{
+    background: linear-gradient(93deg, #b99568 1.38%, #e0b143 25.54%, #b99568 49.69%, #e0b143 73.85%, #9f845c 98.01%);    
+}
+.advantages > div:nth-child(even) .advantagesCard::before{
+    background: linear-gradient(93deg, #cca473 1.38%, #ffcb50 25.54%, #cca473 49.69%, #ffcb50 73.85%, #cca976 98.01%);
+}
+.advantages > div:nth-child(odd) .advantagesCard .stepCircle02 .stepNum{
+    color: #dbca91;
+}
+.advantages > div:nth-child(even) .advantagesCard .stepCircle02 .stepNum{
+    color: #ffd166;
+}
+.advantagesCard .categoryTitle{
+    justify-content: center;
+    text-align: justify;
+}
+.opportunityCard-upperLeft .categoryTitle, .opportunityCard-upperRight .categoryTitle,
+.opportunityCard-lowerLeft .categoryTitle,
+.opportunityCard-lowerRight .categoryTitle{
+    justify-content: center;
+    text-align: justify;
+    color: var(--secondary) !important;    
+}
+.advantagesCard .valueBrief p,
+.opportunityCard-upperLeft .valueBrief p, .opportunityCard-upperRight .valueBrief p,
+.opportunityCard-lowerLeft .valueBrief p,
+.opportunityCard-lowerRight .valueBrief p{
+    text-align: justify;
+}
+.advantages > div:nth-child(odd) .advantagesCard .categoryTitle{
+    color: #7a5d36;
+}
+.advantages > div:nth-child(even) .advantagesCard .categoryTitle{
+    color: #9e7033;
+}
+.exclusiveProdDetail .valueCard-full{
+    align-content: flex-start;
+}
+.exclusiveProdDetail .valueCard-full{
+    padding: 20px 32px 32px;
+}
+.valueCard-full .features{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-family: "Noto Serif TC", sans-serif;
+    font-size: 20px;
+    line-height: 1.3;
+    font-weight: 600;
+    color: var(--secondary-light-text) !important;
+}
+.valueCard-full .features ul{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 0 0 0 24px;
+    padding: 0;
+    list-style: disc;
+}
+.SGSReport{
+    display: flex;
+    flex-direction: column;
+    padding: 0 12%;
+}
+.advantages .aboutImg-middle{
+    box-shadow: 0 0 8px 0 rgba(55, 44, 29, 0.30);
+}
+.experimentalData{
+    position: relative;
+    width: 100%;
+    display: flex;
+    padding: 24px 42px;
+    align-items: center;
+    background-color: #fff;
+    gap: 16px;
+    border-radius: 32px;
+    box-shadow: 0 0 8px 0 rgba(55, 44, 29, 0.3);
+    overflow: hidden; /* 讓偽元素對齊圓角 */    
+}
+.experimentalData::before{
+    content: "";
+    position: absolute;
+    inset: 0; /* top:0 right:0 bottom:0 left:0 */
+    padding: 3px; /* 邊框粗細 */
+    border-radius: 32px;
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+.category .experimentalData:nth-child(odd)::before{
+    background: linear-gradient(93deg, #b99568 1.38%, #e0b143 25.54%, #b99568 49.69%, #e0b143 73.85%, #9f845c 98.01%);
+}
+.category .experimentalData:nth-child(even)::before{
+    background: linear-gradient(93deg, #cca473 1.38%, #ffcb50 25.54%, #cca473 49.69%, #ffcb50 73.85%, #cca976 98.01%);
+}
+.experimentalData .ingredient{
+    flex: 0 0 22%;
+    font-family: "Lora", sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.4;
+}
+.experimentalData .ecosystemText p{
+    margin: 0;
+    padding: 0;
+    font-family: "Noto Serif TC", sans-serif;
+    font-size: 24px;
+    line-height: 1.4;
+    font-weight: 700;
+}
+.experimentalData .ecosystemText ul{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 0 0 0 24px;
+    padding: 0;
+    list-style: disc;
+}
+.experimentalData .ecosystemText li{
+    font-family: "Noto Serif TC", sans-serif;
+    font-size: 24px;
+    line-height: 1.4;
+    font-weight: 700;    
+}
+.category .experimentalData:nth-child(odd) .ingredient{
+    color: #2f54a8;
+}
+.category .experimentalData:nth-child(even) .ingredient{
+    color: var(--primary) !important;
+}
+.category .experimentalData:nth-child(odd) .ecosystemText p,
+.category .experimentalData:nth-child(odd) .ecosystemText li{
+    color: var(--secondary-text) !important;
+}
+.category .experimentalData:nth-child(even) .ecosystemText p,
+.category .experimentalData:nth-child(even) .ecosystemText li{
+    color: var(--primary-text) !important;
 }
 @media screen and (min-width: 992px) and (max-width: 1200px){
     .memberLine a.buttonMoreD{
         width: 50%;
+    } 
+    .advantages .aboutImg-middle{
+        border-radius: 0;
+    }
+    .SGSReport{
+        padding: 0 5%;
     }    
+    .exclusiveProdDetail .valueCard-full{
+        padding: 32px 42px 42px;
+    }
 }
 @media screen and (min-width: 768px) and (max-width: 991px){
     .memberLine a.buttonMoreD{
@@ -5765,15 +6039,38 @@ a:active .productPic img{
     .serviceCard .infoTitle03{
         font-size: 42px;
     }    
+    .SGSReport{
+        padding: 0 3%;
+    }    
+    .advantages .aboutImg-middle{
+        border-radius: 0;
+    }
+    .advantages .infoTitle03{
+        font-size: 30px;
+    }
+    .exclusiveProdDetail .valueCard-full{
+        padding: 32px 42px 42px;
+    }
 }
 @media screen and (max-width: 767px){
     .serviceCard{
-        padding: 24px 20px 24px;
+        padding: 24px 20px;
         border-radius: 24px;
     }  
     .serviceCard::before{
         border-radius: 24px;
     }
+    .opportunityCard-upperLeft, .opportunityCard-upperRight,
+    .opportunityCard-lowerLeft,
+    .opportunityCard-lowerRight{
+        padding: 24px 20px 24px;
+        border-radius: 24px;
+    }  
+    .opportunityCard-upperLeft::before, .opportunityCard-upperRight::before,
+    .opportunityCard-lowerLeft::before,
+    .opportunityCard-lowerRight::before{
+        border-radius: 24px;
+    }    
     .serviceBrief p{
         text-align: justify;
     }
@@ -5790,7 +6087,41 @@ a:active .productPic img{
     }      
     .prod-carousel{
         border-radius: 24px;
+    }
+    .advantagesCard{
+        padding: 24px 20px;
+        border-radius: 24px;
+    }
+    .advantagesCard::before{
+        border-radius: 24px;
     }    
+    .advantages {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+    .SGSReport{
+        padding: 0;
+    }    
+    .advantages .aboutImg-middle{
+        border-radius: 0;
+    }
+    .advantages .infoTitle03{
+        font-size: 28px;
+    }
+    .experimentalData{
+        padding: 20px 32px 24px;
+        flex-direction: column;
+        border-radius: 24px;
+    }
+    .experimentalData::before{
+        border-radius: 24px;
+    }
+    .exclusiveProdDetail .valueCard-full{
+        padding: 24px 20px;
+    }
 }
 /*----------   會員專屬精選商品 End   ----------*/
 
@@ -5802,7 +6133,6 @@ a:active .productPic img{
 .footer a {
     text-decoration: none;
 }
-
 .copyright {
     display: block;
     font-size: 18px;
