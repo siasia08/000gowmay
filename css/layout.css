@@ -2328,6 +2328,11 @@ a:hover > .knowCat .knowTag07{
 	color: #f8f5f2;
 	text-shadow: 0 0 10px #2c2826;	
 }
+.bg-breadcrumb .breadcrumb-item{
+    font-family: "Zen Maru Gothic", sans-serif !important;
+    font-weight: 400;
+	font-size: 22px;
+}
 .bg-breadcrumb .breadcrumb-item.active{
     font-family: "Zen Maru Gothic", sans-serif !important;
     font-weight: 400;   
