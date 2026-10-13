@@ -45,7 +45,7 @@
         smartSpeed: 2000,
         center: false,
         dots: true,
-        loop: true,
+        loop: false,
         margin: 36,
         nav : false,
         navText : [
@@ -56,11 +56,11 @@
         responsive: {
             0:{
                 items:1,
-                stagePadding: 40
+                stagePadding: 16
             },
             576:{
                 items:1,
-                stagePadding: 60
+                stagePadding: 16
             },
             768:{
                 items:2,
